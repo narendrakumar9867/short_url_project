@@ -10,72 +10,108 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #6c63ff, #c4c4c4);
+            background-image: url("../../media/examples/lizard.png");
             color: #333;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+        }
+        .logo {
+            margin-bottom: 1rem;
+        }
+        .logo img {
+            max-width: 100px;
+            border-radius: 50%;
         }
         h1 {
             text-align: center;
-            margin-bottom: 28rem;
-            color: #0a056c;
-            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #4a4a8e;
+            font-size: 2.5rem;
+            font-weight: bold;
         }
         form {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
             width: 100%;
+            margin: 0 auto;
         }
         label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
+            color: #333;
         }
         input {
-            width: calc(100% - 16px);
-            padding: 0.5rem;
+            width: 100%;
+            padding: 0.7rem;
             margin-bottom: 1rem;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 1rem;
             box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
         }
         input:focus {
             border-color: #6c63ff;
             outline: none;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
         }
         button {
             width: 100%;
-            padding: 0.7rem;
+            padding: 0.8rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             background-color: #6c63ff;
             color: #fff;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         button:hover {
             background-color: #5750d6;
+            transform: scale(1.03);
+        }
+        .footer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer a {
+            color: #6c63ff;
+            text-decoration: none;
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signup Page</title>
 </head>
 <body>
-    <h1>Signup</h1>
-    <form action="/user" method="post">
-        <label>Full Name</label>
-        <input type="text" required name="name"/>
-        <label>Email</label>
-        <input type="text" required name="email"/>
-        <label>Password</label>
-        <input type="text" required name="password"/>
+    <div class="container">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/4151/4151489.png" alt="Peacock Logo" />
+        </div>
+        <h1>Signup</h1>
+        <form action="/user" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required name="name" placeholder="Enter your full name" />
 
-        <button type="submit">Signup</button>
-    </form>
+            <label for="email">Email</label>
+            <input type="email" id="email" required name="email" placeholder="Enter your email" />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required name="password" placeholder="Create a password" />
+
+            <button type="submit">Signup</button>
+        </form>
+        <div class="footer">
+            <p>By signing up, you agree to our <a href="#">Terms & Conditions</a>.</p>
+        </div>
+    </div>
 </body>
 </html>
