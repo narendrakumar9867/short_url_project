@@ -6,7 +6,9 @@ const { checkForAuthentication, restrictTo} = require('./middleware/auth')
 const URL = require("./models/url");
 
 const urlRoute = require("./routes/url");
+
 const staticRoute = require('./routes/staticRouter');
+
 const userRoute = require("./routes/user");
 
 
