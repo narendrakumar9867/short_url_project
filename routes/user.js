@@ -9,4 +9,5 @@ const router = express.Router();
 router.post("/", handleUserSignup);
 router.post("/login", handleUserLogin);
 
+// for exports the router
 module.exports = router;
