@@ -16,6 +16,7 @@ const app = express();
 
 const PORT = 9867;
 
+// for connecting mongoDB in server
 connectToMongoDB(process.env.MONGODB ?? "mongodb://127.0.0.1:27017/short_url").then(() => console.log('MongoDB connecteed.')
 );
 
