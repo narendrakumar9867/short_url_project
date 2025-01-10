@@ -14,6 +14,7 @@ const userRoute = require("./routes/user");
 
 const app = express();
 
+// number of port for using in url
 const PORT = 9867;
 
 // for connecting mongoDB in server
