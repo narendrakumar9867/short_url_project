@@ -9,7 +9,7 @@ function checkForAuthentication(req, res, next) {
     const token = tokenCookie;
     const user = getUser(token);
 
-    req.user = 
+    req.user = user;
     return next();
 }
 
