@@ -24,4 +24,5 @@ function restrictTo(roles = []) {
 
 module.exports = {
     checkForAuthentication,
+    restrictTo,
 };
